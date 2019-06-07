@@ -21,11 +21,11 @@
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Device
-$(call inherit-product, device/motorola/evert/device.mk)
-
 # Inherit some common Bootleg stuff.
 $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+
+# Device
+$(call inherit-product, device/motorola/evert/device.mk)
 
 # A/B updater
 AB_OTA_UPDATER := true
