@@ -15,14 +15,17 @@
 #
 
 # Inherit some common Havoc stuff.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/bootleggers/config/common.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+#$(call inherit-product, vendor/bootleggers/config/common.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Device
 $(call inherit-product, device/motorola/evert/device.mk)
+
+# Inherit some common Bootleg stuff.
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # A/B updater
 AB_OTA_UPDATER := true
@@ -68,7 +71,7 @@ endif
 
 # Device identifiers
 PRODUCT_DEVICE := evert
-PRODUCT_NAME := havoc_evert
+PRODUCT_NAME := bootleg_evert
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto G6 Plus
 PRODUCT_MANUFACTURER := Motorola
@@ -79,9 +82,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := motorola/evert_retail/evert:9/PPWS29.116-11-2/00cb:user/release-keys
 
-# Official
-export export HAVOC_BUILD_TYPE=Official
-
 #device maintainer
 PRODUCT_PROPERTY_OVERRIDES += \
- 	ro.havoc.maintainer=fJSanti
+ 	ro.havoc.maintainer="@kepozu"
