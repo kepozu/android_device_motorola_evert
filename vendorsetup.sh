@@ -17,6 +17,3 @@
 add_lunch_combo bootleg_evert-eng
 add_lunch_combo bootleg_evert-user
 add_lunch_combo bootleg_evert-userdebug
-add_lunch_combo havoc_evert-userdebug
-add_lunch_combo havoc_evert-user
-add_lunch_combo havoc_evert-eng
